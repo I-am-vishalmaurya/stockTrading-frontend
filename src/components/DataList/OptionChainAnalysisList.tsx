@@ -39,14 +39,9 @@ const OptionChainAnalysisList = () => {
     }
   };
 
-  const paginate = (apiData: ApiDataType) =>{
-    if(apiData.next){
-      setPageNumber(pageNumber + 1);
-    }else if(apiData.previous){
-      setPageNumber(pageNumber - 1);
-    }else{
-      setPageNumber(1);
-    }
+
+  const paginate = (page_from_muui: number) =>{
+    setPageNumber(page_from_muui)
   }
 
   React.useEffect(() => {
